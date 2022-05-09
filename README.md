@@ -2,7 +2,7 @@
 ![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/codebrick-corp/aws-dms-task-exporter.svg)
 ![Image Build CI](https://github.com/codebrick-corp/aws-dms-task-exporter/actions/workflows/build.yml/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/codebrick-corp/dms-statistics-exporter)](https://goreportcard.com/report/github.com/codebrick-corp/dms-statistics-exporter)
-[![GitHub release](https://img.shields.io/github/release/codebrick-corp/aws-dms-task-exporter.svg)](https://gitHub.com/codebrick-corp/aws-dms-task-exporter/releases/)
+[![GitHub release](https://badgen.net/github/release/codebrick-corp/aws-dms-task-exporter)](https://gitHub.com/codebrick-corp/aws-dms-task-exporter/releases/)
 
  This is simple service to scrapes the [AWS DMS Task](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html), especially for [DMS Table Statistics](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html#CHAP_Tasks.CustomizingTasks.TableState). The exporter exports the prometheus metrics via HTTP. It could help you to monitor detailed metrics about AWS DMS tasks.
 
