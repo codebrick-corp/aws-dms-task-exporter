@@ -4,12 +4,16 @@ metadata:
   name: aws-dms-task-exporter
   labels:
     app: aws-dms-task-exporter
+  {{- with .Values.podAnnotations }}
+  annotations:
+    {{- toYaml . | nindent 6 }}
+  {{- end }}
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: metrics
       protocol: TCP
-      name: http
+      name: metrics
   selector:
     app: aws-dms-task-exporter

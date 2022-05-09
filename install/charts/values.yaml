@@ -30,4 +30,11 @@ affinity: {}
 
 labels: {}
 
-podAnnotations: {}
+podAnnotations:
+  prometheus.io/scrape: "true"
+
+env: []
+  # - name: AWS_ACCESS_KEY_ID
+  #   value: YOUR_AWS_ACCESS_KEY
+  # - name: AWS_SECRET_ACCESS_KEY
+  #   value: YOUR_AWS_SECRET_ACCESS_KEY
