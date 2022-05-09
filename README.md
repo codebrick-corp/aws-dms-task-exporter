@@ -8,6 +8,12 @@
 
 
 ## Installation
+### Helm
+Please check [values.yaml](https://github.com/codebrick-corp/aws-dms-task-exporter/blob/main/install/charts/values.yaml) file and override values according to your demand.
+```shell
+# using helm v3
+helm install aws-dms-task-exporter install/charts
+```
 
 ### Docker
 ```shell
@@ -15,7 +21,7 @@ docker run -d \
  -p 8080:8080 \
  -e AWS_ACCESS_KEY_ID='YOUR AWS KEY ID' \
  -e AWS_SECRET_ACCESS_KEY='YOUR AWS SECRET ACCESS KEY' \
- ghcr.io/codebrick-corp/aws-dms-task-exporter:main
+ ghcr.io/codebrick-corp/aws-dms-task-exporter:1.1.0
 ```
 
 ### Local
