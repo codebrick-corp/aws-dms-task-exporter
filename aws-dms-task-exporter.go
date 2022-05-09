@@ -79,7 +79,7 @@ func (c *collector) Collect(ch chan<- prometheus.Metric) {
 	gauge := prometheus.NewGaugeVec(prometheus.GaugeOpts{
 		Name:      MetricName,
 		Namespace: MetricNamespace,
-		Help:      "Gauge for aws health events",
+		Help:      MetricHelpMessage,
 	}, MetricLabels)
 	c.fetch(gauge)
 	gauge.Collect(ch)
