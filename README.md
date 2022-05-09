@@ -43,11 +43,11 @@ Belows are the list of metrics that `aws-dms-task-exporter` exports.
 Sample metrics
 ```
 # TYPE dms_task_stats gauge
-dms_task_stats{action="delete",region="ap-southeast-1",schema="example_schema",table="inventories"} 40601
-dms_task_stats{action="insert",region="ap-southeast-1",schema="example_schema",table="inventories"} 4.145428e+06
-dms_task_stats{action="update",region="ap-southeast-1",schema="example_schema",table="inventories"} 1.24051e+06
+dms_task_stats{action="delete",region="ap-southeast-1",identifier="inventory-change-task",schema="example_schema",table="inventories"} 40601
+dms_task_stats{action="insert",region="ap-southeast-1",identifier="inventory-change-task",schema="example_schema",table="inventories"} 4.145428e+06
+dms_task_stats{action="update",region="ap-southeast-1",identifier="inventory-change-task",schema="example_schema",table="inventories"} 1.24051e+06
 ```
 
 Name | Description | Labels
 -----|-----|-----
-dms_task_stats | DMS Task Table Statistics showing counts of Insert, Delete, Update of source tables | action, region, schema, table
+dms_task_stats | DMS Task Table Statistics showing counts of Insert, Delete, Update of source tables | action, region, schema, table, identifier

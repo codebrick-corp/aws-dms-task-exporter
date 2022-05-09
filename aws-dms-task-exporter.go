@@ -18,7 +18,7 @@ var (
 	MetricName        = "task_stats"
 	MetricNamespace   = "dms"
 	MetricHelpMessage = "Gauge for dms tasks statistics"
-	MetricLabels      = []string{"region", "schema", "table", "action"}
+	MetricLabels      = []string{"region", "identifier", "schema", "table", "action"}
 )
 
 type collector struct {
@@ -106,9 +106,9 @@ func (c *collector) fetch(gauge *prometheus.GaugeVec) {
 			continue
 		}
 		for _, stat := range stats {
-			gauge.WithLabelValues(viper.GetString("AWS_REGION"), *stat.schemaName, *stat.tableName, "insert").Set(float64(*stat.inserts))
-			gauge.WithLabelValues(viper.GetString("AWS_REGION"), *stat.schemaName, *stat.tableName, "delete").Set(float64(*stat.deletes))
-			gauge.WithLabelValues(viper.GetString("AWS_REGION"), *stat.schemaName, *stat.tableName, "update").Set(float64(*stat.updates))
+			gauge.WithLabelValues(viper.GetString("AWS_REGION"), *task.identifier, *stat.schemaName, *stat.tableName, "insert").Set(float64(*stat.inserts))
+			gauge.WithLabelValues(viper.GetString("AWS_REGION"), *task.identifier, *stat.schemaName, *stat.tableName, "delete").Set(float64(*stat.deletes))
+			gauge.WithLabelValues(viper.GetString("AWS_REGION"), *task.identifier, *stat.schemaName, *stat.tableName, "update").Set(float64(*stat.updates))
 		}
 	}
 }
