@@ -4,7 +4,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/codebrick-corp/dms-statistics-exporter)](https://goreportcard.com/report/github.com/codebrick-corp/dms-statistics-exporter)
 [![GitHub release](https://badgen.net/github/release/codebrick-corp/aws-dms-task-exporter)](https://gitHub.com/codebrick-corp/aws-dms-task-exporter/releases/)
 
- This is simple service to scrapes the [AWS DMS Task](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html), especially for [DMS Table Statistics](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html#CHAP_Tasks.CustomizingTasks.TableState). The exporter exports the prometheus metrics via HTTP. It could help you to monitor detailed metrics about AWS DMS tasks.
+ This is a simple service to scrape the [AWS DMS Task](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html), especially for [DMS Table Statistics](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html#CHAP_Tasks.CustomizingTasks.TableState). The exporter exports Prometheus metrics via HTTP. It could help you to monitor detailed metrics about AWS DMS tasks.
 
 
 ## Installation
@@ -38,7 +38,7 @@ expose AWS_SECRET_ACCESS_KEY='YOUR AWS SECRET ACCESS KEY'
 ```
 
 ## Metrics
-Belows are the list of metrics that `aws-dms-task-exporter` exports.
+Below is the list of metrics that `aws-dms-task-exporter` exports.
 
 Sample metrics
 ```
